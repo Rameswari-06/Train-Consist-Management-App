@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
@@ -62,5 +63,16 @@ public class TrainConsistManagementApp {
 
         System.out.println("\nFinal Train Consist:");
         System.out.println(consist);
+
+        LinkedHashSet<String> formation = new LinkedHashSet<>();
+
+        formation.add("Engine");
+        formation.add("Sleeper");
+        formation.add("Cargo");
+        formation.add("Guard");
+        formation.add("Sleeper");
+
+        System.out.println("\nTrain Formation (Insertion Order, No Duplicates):");
+        System.out.println(formation);
     }
 }
