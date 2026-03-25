@@ -1,8 +1,10 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 public class TrainConsistManagementApp {
@@ -74,5 +76,16 @@ public class TrainConsistManagementApp {
 
         System.out.println("\nTrain Formation (Insertion Order, No Duplicates):");
         System.out.println(formation);
+
+        Map<String, Integer> bogieCapacity = new HashMap<>();
+
+        bogieCapacity.put("Sleeper", 72);
+        bogieCapacity.put("AC Chair", 60);
+        bogieCapacity.put("First Class", 40);
+
+        System.out.println("\nBogie Capacities:");
+        for (Map.Entry<String, Integer> entry : bogieCapacity.entrySet()) {
+            System.out.println(entry.getKey() + " -> " + entry.getValue());
+        }
     }
 }
