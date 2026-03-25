@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 
@@ -45,5 +46,21 @@ public class TrainConsistManagementApp {
 
         System.out.println("\nUnique Bogie IDs:");
         System.out.println(bogieIds);
+
+        LinkedList<String> consist = new LinkedList<>();
+
+        consist.add("Engine");
+        consist.add("Sleeper");
+        consist.add("AC");
+        consist.add("Cargo");
+        consist.add("Guard");
+
+        consist.add(2, "Pantry");
+
+        consist.removeFirst();
+        consist.removeLast();
+
+        System.out.println("\nFinal Train Consist:");
+        System.out.println(consist);
     }
 }
